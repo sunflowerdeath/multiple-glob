@@ -5,22 +5,22 @@ Match files using [node-glob](https://github.com/isaacs/node-glob) but with arra
 #Install
 
 ```
-npm install glob-array
+npm install multiple-glob
 ```
 
 #Usage
 
 ```
-var globArray = require('glob-array')
+var multiGlob = require('multiple-glob')
 
-globArray(['**/*.js', '!node/**', '**/*.css'], function(err, files) {
+multiGlob(['**/*.js', '!node/**', '**/*.css'], function(err, files) {
 	console.log('Yay!')
 })
 ```
 
 #API
 
-##globArray(patterns, [options], callback)
+##multiGlob(patterns, options, callback)
 
 Match files with array of patterns and combines results.
 Patterns with negation do not add new results, but filters matched results.
@@ -42,7 +42,7 @@ Options for glob.
 
 Type: `function` 
 
-##globArray.sync(pattern, [options])
+##multiGlob.sync(pattern, options)
 
 Synchronous version.
 
