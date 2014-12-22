@@ -24,6 +24,8 @@ Order of patterns is important.
 
 Type: `array`
 
+List of patterns.
+
 ###options
 
 Type: `object`
