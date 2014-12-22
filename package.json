@@ -1,0 +1,25 @@
+{
+  "name": "glob-array",
+  "version": "0.0.0",
+  "description": "Match files with array of patterns.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "keywords": [
+    "glob"
+  ],
+  "author": "sunflowerdeath",
+  "license": "public domain",
+  "dependencies": {
+    "glob": "^4.3.2",
+    "q": "^1.1.2",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  }
+}
