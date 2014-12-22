@@ -1,11 +1,15 @@
 {
   "name": "multiple-glob",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Match files with array of patterns.",
   "main": "index.js",
   "directories": {
     "test": "tests"
   },
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sunflowerdeath/multiple-glob"
+	},
   "scripts": {
     "test": "mocha tests"
   },

@@ -1,4 +1,4 @@
-#Description
+#multiple-glob
 
 Match files using [node-glob](https://github.com/isaacs/node-glob) but with array of patterns.
 
