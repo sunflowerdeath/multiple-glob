@@ -2,6 +2,12 @@
 
 Match files using [node-glob](https://github.com/isaacs/node-glob) but with array of patterns.
 
+#Install
+
+```
+npm install glob-array
+```
+
 #Usage
 
 ```
