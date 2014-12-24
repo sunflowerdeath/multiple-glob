@@ -12,7 +12,7 @@ function applyMatches(matches) {
 	return result
 }
 
-var globArray = function(patterns, options, callback) {
+var multiglob = function(patterns, options, callback) {
 	if (typeof options === 'function') {
 		callback = options
 		options = {}
@@ -31,7 +31,7 @@ var globArray = function(patterns, options, callback) {
 		.fail(function(error) { callback(error) })
 }
 
-globArray.sync = function(patterns, options) {
+multiglob.sync = function(patterns, options) {
   var matches = _.map(patterns, function(pattern) {
     var exclusion = pattern.indexOf('!') === 0
     if (exclusion) pattern = pattern.slice(1)
@@ -42,4 +42,4 @@ globArray.sync = function(patterns, options) {
 	return applyMatches(matches)
 }
 
-module.exports = globArray
+module.exports = multiglob

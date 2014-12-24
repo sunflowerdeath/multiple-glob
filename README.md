@@ -11,16 +11,16 @@ npm install multiple-glob
 #Usage
 
 ```
-var multiGlob = require('multiple-glob')
+var multiglob = require('multiple-glob')
 
-multiGlob(['**/*.js', '!node/**', '**/*.css'], function(err, files) {
+multiglob(['**/*.js', '!node/**', '**/*.css'], function(err, files) {
 	console.log('Yay!')
 })
 ```
 
 #API
 
-##multiGlob(patterns, options, callback)
+##multiglob(patterns, options, callback)
 
 Match files with array of patterns and combines results.
 Patterns with negation do not add new results, but filters matched results.
@@ -42,7 +42,7 @@ Options for glob.
 
 Type: `function` 
 
-##multiGlob.sync(pattern, options)
+##multiglob.sync(pattern, options)
 
 Synchronous version.
 
