@@ -1,52 +1,53 @@
-#multiple-glob
+# multiple-glob
 
 Match files using [node-glob](https://github.com/isaacs/node-glob) but with array of patterns.
 
-#Install
+## Install
 
 ```
 npm install multiple-glob
 ```
 
-#Usage
+## Usage
 
-```
+```js
 var multiglob = require('multiple-glob')
 
 multiglob(['**/*.js', '!node/**', '**/*.css'], function(err, files) {
-	console.log('Yay!')
+  console.log('Yay!')
 })
 ```
 
-#API
+##API
 
-##multiglob(patterns, options, callback)
+### multiglob(patterns, options, callback)
 
 Match files with array of patterns and combines results.
-Patterns with negation do not add new results, but filters matched results.
-Order of patterns is important.
 
-###patterns
+Patterns that begin with `!` will exclude files.
+Patterns are processed in order, so inclusion and exclusion order is significant.
+
+#### patterns
 
 Type: `array`
 
 List of patterns.
 
-###options
+#### options
 
 Type: `object`
 
 Options for glob.
 
-###callback
+#### callback
 
 Type: `function` 
 
-##multiglob.sync(pattern, options)
+### multiglob.sync(pattern, options)
 
 Synchronous version.
 
-#License
+## License
 
 Public domain, see the `LICENCE.md` file.
 

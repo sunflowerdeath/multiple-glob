@@ -32,10 +32,15 @@ var multiglob = function(patterns, options, callback) {
 }
 
 multiglob.sync = function(patterns, options) {
+	if (options === undefined) options = {}
+	options.sync = true
+	var lastGlob
+
   var matches = _.map(patterns, function(pattern) {
     var exclusion = pattern.indexOf('!') === 0
     if (exclusion) pattern = pattern.slice(1)
-    var matches = glob.sync(pattern, options)
+		lastGlob = new glob.Glob(pattern, lastGlob || options)
+    var matches = lastGlob.found
 		return {exclusion: exclusion, matches: matches}
   })
 
